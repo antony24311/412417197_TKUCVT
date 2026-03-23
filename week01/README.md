@@ -18,32 +18,34 @@
 
 ## 四層驗收證據
 - [x] ① Repository：`cat /etc/apt/sources.list.d/docker.list` 輸出
-![image](https://hackmd.io/_uploads/rJdef2vqWl.png)
+<img width="1044" height="94" alt="image" src="https://github.com/user-attachments/assets/9ab33f18-5e23-4bee-ba36-367503ccfcd4" />
 
 - [x] ② Engine：`dpkg -l | grep docker-ce` 輸出
-![image](https://hackmd.io/_uploads/BJzSM3vcbx.png)
+<img width="1042" height="198" alt="image" src="https://github.com/user-attachments/assets/93b05789-c892-4ba8-8079-4409a12ce9a6" />
 
 - [x] ③ Daemon：`sudo systemctl status docker` 顯示 active
-![image](https://hackmd.io/_uploads/rJjwfnw5Zx.png)
+<img width="1060" height="390" alt="image" src="https://github.com/user-attachments/assets/6e6d0655-f86b-4f31-b901-9f2399dffcfb" />
 
 - [x] ④ 端到端：`sudo docker run hello-world` 成功輸出
-![image](https://hackmd.io/_uploads/rkfJmnPcbx.png)
+<img width="1056" height="438" alt="image" src="https://github.com/user-attachments/assets/d1aa6fcc-1681-4164-a850-6a10cc071a93" />
 
 - [x] Compose：`docker compose version` 可執行
-![image](https://hackmd.io/_uploads/rkDjMhPcZg.png)
+<img width="1056" height="438" alt="image" src="https://github.com/user-attachments/assets/3424a5b4-83f9-4f14-92b2-6dd0abcc3331" />
+
 
 
 
 ## 容器操作紀錄
 - [x] nginx：`sudo docker run -d -p 8080:80 nginx` + `curl localhost:8080` 輸出
-![image](https://hackmd.io/_uploads/HkLyWRw5-l.png)
+<img width="1046" height="488" alt="image" src="https://github.com/user-attachments/assets/85a1149f-89bd-4888-9c25-d6d35350b916" />
 
 - [x] alpine：`sudo docker run -it --rm alpine /bin/sh` 內部命令與輸出
-![image](https://hackmd.io/_uploads/Hk4HbAP5Zg.png)
+<img width="1064" height="442" alt="image" src="https://github.com/user-attachments/assets/deedf39c-63ad-47e1-9811-46d634a7e781" />
 
 
 - [x] 映像列表：`sudo docker images` 輸出
-![image](https://hackmd.io/_uploads/ryRUbRvqbl.png)
+<img width="1064" height="442" alt="image" src="https://github.com/user-attachments/assets/0c6fefb6-9336-4296-88bb-ca0fddefcced" />
+
 
 ## Snapshot 清單
 
@@ -97,7 +99,7 @@ sudo apt -y install docker-ce 2>&1 | tail -5
 - 症狀：
 透過 `apt-cache policy docker-ce` 觀察到 Version table 異常。原本應指向https://download.docker.com/linux/ubuntu 的來源消失，僅剩本地已安裝的快取資訊（Priority 100）。
 嘗試執行安裝指令時，系統提示「0 upgraded, 0 newly installed」，無法獲取遠端新版本。
-![image](https://hackmd.io/_uploads/H1XeBAA9be.png)
+<img width="1262" height="784" alt="image" src="https://github.com/user-attachments/assets/4eb09662-f15e-42ff-914c-74af3dcfc726" />
 
 - 診斷：
 `ls /etc/apt/sources.list.d/ `檢查軟體源配置目錄
