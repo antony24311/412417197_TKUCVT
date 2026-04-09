@@ -24,6 +24,9 @@
 | dev-a ping server-b | 成功 | 失敗 | 成功 |
 | dev-a SSH server-b | 成功 | 失敗 | 成功 |
 
+![7](https://hackmd.io/_uploads/BJexQES3-l.png)
+![8](https://hackmd.io/_uploads/HkgeQ4S3-l.png)
+
 ## 故障演練二：SSH 服務停止
 
 | 項目 | 故障前 | 故障中 | 回復後 |
@@ -31,6 +34,9 @@
 | ss -tlnp grep :22 | 有監聽 | 無監聽 | 有監聽 |
 | dev-a ping server-b | 成功 | 成功 | 成功 |
 | dev-a SSH server-b | 成功 | Connection refused | 成功 |
+
+![9](https://hackmd.io/_uploads/Hyt-X4r2Zg.png)
+![螢幕擷取畫面 2026-04-09 210424](https://hackmd.io/_uploads/SytW7EB2bx.png)
 
 ## 排錯順序
 L2 (Data Link - 資料連結層)：
@@ -93,6 +99,7 @@ graph TD
 - 驗證：在 server-b 確認 ip addr 重新取得 192.168.229.129。
     在 dev-a 再次測試 ssh 連線，成功看到 password 輸入提示並取得 server-b 的 hostname
 ![6](https://hackmd.io/_uploads/rkycsQB2Wl.png)
+
 ![7](https://hackmd.io/_uploads/r12McQS3-x.png)
 ![8](https://hackmd.io/_uploads/rkEwsXS2bx.png)
 
