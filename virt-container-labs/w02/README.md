@@ -24,8 +24,8 @@
 | dev-a ping server-b | 成功 | 失敗 | 成功 |
 | dev-a SSH server-b | 成功 | 失敗 | 成功 |
 
-![7](https://hackmd.io/_uploads/BJexQES3-l.png)
-![8](https://hackmd.io/_uploads/HkgeQ4S3-l.png)
+![7](7.png)
+![8](8.png)
 
 ## 故障演練二：SSH 服務停止
 
@@ -35,8 +35,8 @@
 | dev-a ping server-b | 成功 | 成功 | 成功 |
 | dev-a SSH server-b | 成功 | Connection refused | 成功 |
 
-![9](https://hackmd.io/_uploads/Hyt-X4r2Zg.png)
-![螢幕擷取畫面 2026-04-09 210424](https://hackmd.io/_uploads/SytW7EB2bx.png)
+![9](9.png)
+![螢幕擷取畫面 2026-04-09 210424](螢幕擷取畫面 2026-04-09 210424.png)
 
 ## 排錯順序
 L2 (Data Link - 資料連結層)：
@@ -98,10 +98,9 @@ graph TD
 - 修正：在 server-b 執行 sudo ip link set ens33 up 重新啟動網卡介面
 - 驗證：在 server-b 確認 ip addr 重新取得 192.168.229.129。
     在 dev-a 再次測試 ssh 連線，成功看到 password 輸入提示並取得 server-b 的 hostname
-![6](https://hackmd.io/_uploads/rkycsQB2Wl.png)
-
-![7](https://hackmd.io/_uploads/r12McQS3-x.png)
-![8](https://hackmd.io/_uploads/rkEwsXS2bx.png)
+![6](6.png)
+![7](7.png)
+![8](8.png)
 
 ## 設計決策
 1. NAT / Bridged / Host-only 三種模式的差異摘要
