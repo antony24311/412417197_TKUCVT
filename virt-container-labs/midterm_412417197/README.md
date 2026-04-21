@@ -62,7 +62,7 @@ Bastion
 | [1]  | 22/tcp        | ALLOW IN      | Anywhere |
 | [1] | 22/tcp (v6)           | ALLOW IN       | Anywhere  (v6)         |
 
-![success_ssh](https://hackmd.io/_uploads/S1QACfBaZl.png)
+![success_ssh](./screenshots/success_ssh.png)
 
 ## 4. Part C：Docker 服務
 systemctl status docker輸出
@@ -135,12 +135,12 @@ IMAGE          CREATED              CREATED BY                                  
 e6bcd279301d   About a minute ago   EXPOSE [80/tcp]                                 0B        buildkit.dockerfile.v0
 <missing>      About a minute ago   COPY index.html /usr/share/nginx/html/index.…   24.6kB    buildkit.dockerfile.v0
 ```
-![Bonus 1](https://hackmd.io/_uploads/rynvAMHpZe.png)
+![Bonus 1](./screenshots/Bonus 1.png)
 
 
 為什麼 COPY index.html 要放在 FROM 後面（快取考量）?
 * FROM 是最底層，通常不會變動。Docker 會由上而下檢查每一行指令，如果指令內容與檔案沒有變動，它會直接使用 Cache
 
 Bonus 2:
-![Bonus 2](https://hackmd.io/_uploads/B1yx_zBpbx.png)
+![Bonus 2](./screenshots/Bonus 2.png)
 64m 在 cgroup 裡代表的是 67,108,864 bytes
