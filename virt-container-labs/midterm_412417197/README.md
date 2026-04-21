@@ -135,7 +135,7 @@ IMAGE          CREATED              CREATED BY                                  
 e6bcd279301d   About a minute ago   EXPOSE [80/tcp]                                 0B        buildkit.dockerfile.v0
 <missing>      About a minute ago   COPY index.html /usr/share/nginx/html/index.…   24.6kB    buildkit.dockerfile.v0
 ```
-![Bonus 1](./screenshots/Bonus 1.png)
+![Bonus 1](./screenshots/Bonus%201.png)
 
 
 為什麼 COPY index.html 要放在 FROM 後面（快取考量）?
