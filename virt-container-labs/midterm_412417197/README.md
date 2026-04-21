@@ -142,5 +142,5 @@ e6bcd279301d   About a minute ago   EXPOSE [80/tcp]                             
 * FROM 是最底層，通常不會變動。Docker 會由上而下檢查每一行指令，如果指令內容與檔案沒有變動，它會直接使用 Cache
 
 Bonus 2:
-![Bonus 2](./screenshots/Bonus 2.png)
+![Bonus 2](./screenshots/Bonus%202.png)
 64m 在 cgroup 裡代表的是 67,108,864 bytes
